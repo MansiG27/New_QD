@@ -18,6 +18,7 @@
     --secondary-font : "Poppins" , Sans-serif; 
     --text-black : #000000;
     --text-white :#ffffff;
+    --text-blue : #212C64;
 }
 a {
     text-decoration: none;
@@ -33,7 +34,7 @@ a {
     background: var(--primary-color2);
 }
 .wrapper{
-    padding:6.25rem 0;
+    padding:4.25rem 4.5rem 0 0;
 }
 .main-btn{
     display: inline-block;
@@ -57,11 +58,11 @@ a {
     border-color:var(--primary-color2);
     color:var(--text-white);
 }
-/* .fill-btn:hover{
-    background-color:var(--bg-white);
-    border-color:var(--bg-white);
-    color:var(--text-black)
-} */
+.fill-btn:hover{
+    background-color:var(--primary-color2);
+    border-color:var(--primary-color1);
+    color:var(--text-black);
+}
 h1{
     font-size: 3.875rem;
     margin-bottom:1.25rem;
@@ -82,11 +83,11 @@ h3{
     font-family: var(--secondary-font);
 }
 h4{
-    font-size: 1.5rem; 
-    font-weight: 600;
+    font-size: 1.7rem; 
+    font-weight: 800;
     line-height: 2.25rem;
-    color:var(--text-black);
-    font-family: var(--secondary-font);
+    color:var(--text-blue);
+    font-family: var(--primary-font);
 }
 h5{
     font-size: 1.5rem; 
@@ -105,8 +106,8 @@ h6{
     font-family: var(--secondary-font);
 }
 p{
-    font-size: 1rem;
-    color:var(--text-gray);
+    font-size: 1.2rem;
+    color:var(--text-black);
     line-height: 1.625rem;
 } 
 .card{
@@ -173,3 +174,108 @@ p{
     box-shadow: .5084rem 1.1419rem 2.5rem 0 rgb(0 0 0 / 8%);
     transition:0.3s ease-in-out;
 }
+
+/* banner */
+.banner_wrapper{
+    /* background-image:url('../images/top-banner-img/Top-banner.jpg'); */
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.banner_wrapper p{
+    max-width: 80%;
+    color:var(--text-black);
+}
+
+.banner_wrapper .top-right-sec{
+    position:relative;
+    background-color: #B2D8FC;
+    /* background-image:url('../images/top-banner-img/top-right-bg.png'); */
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    display: flex;
+    align-items: flex-end;
+    justify-content:center;
+}
+.banner_wrapper .animate-img{
+    position:absolute;
+    bottom:0;
+    left: 20%;
+    -webkit-transform:translateX(-50%);
+    transform:translateX(-50%);
+    z-index:22;
+}
+.banner_wrapper .animate-img .aimg1{
+    left:-5.6875rem;
+    position:absolute;
+    -webkit-animation-name:movebounce;
+    animation-name:movebounce;
+    -webkit-animation-delay: 100ms;
+    animation-delay: 100ms;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+.banner_wrapper .animate-img .aimg2{
+    margin-left:5.5rem; 
+    -webkit-animation-name:movebounce;
+    animation-name:movebounce;
+    -webkit-animation-delay: 200ms;
+    animation-delay: 200ms;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 2.5s;
+    animation-duration: 2.5s;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.home .card:hover{
+    -webkit-transform:translateY(-0.625rem);
+    transform:translateY(-0.625rem);
+}
+.home .icon-box{
+    text-align: center;
+    margin: 0 auto 2.5rem;
+}
+
+.home .card-item {
+    border: 1px solid rgba(82, 86, 94, 0.2);
+    background: #fff;
+    position: relative;
+    border-radius: 0;
+    width: fit-content;
+  }
+  
+.home .card-item .card-bg {
+    min-height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+  }
+  
+  .home.card-item .card-body {
+    padding: 30px;
+  }
+  
+  .home .card-item h4 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--color-secondary);
+  }
+  
+  .home .card-item p {
+    color: var(--color-secondary);
+    margin: 0;
+  }
